@@ -1,0 +1,18 @@
+<p>
+  Sample Datas
+</p>
+<table>
+  <tr>
+    <td>Sno</td>
+    <td>Name</td>
+    <td>Status</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor ="let data of datas let myIndex = index;">
+    <td>{{ myIndex+1 }}</td>
+    <td>{{ data.title }}</td>
+    <td>{{ data.completed }}</td>
+    <td><button [routerLink]="['/dataview', data.id]">View</button></td>
+  </tr>
+</table>
+
